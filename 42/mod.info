@@ -1,0 +1,10 @@
+name=Nutrition Panel for PZ Pulse Refactor
+id=PZ_Nutri_Panel
+author=FireBjorne
+description=Proof of concept new panel for PZ Pulse Refactor
+poster=poster.png
+icon=poster.png
+category=features
+modversion=0.0.8
+versionMin=42.0.0
+require=PZ_Pulse_Refactor
