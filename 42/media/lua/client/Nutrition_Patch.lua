@@ -1,5 +1,9 @@
-PZ_Pulse_Refactor = PZ_Pulse_Refactor or {}
-local PC = PZ_Pulse_Refactor
+-- Nutrition panel for PZ Pulse, registered against the PZ Pulse extension API v1.
+--
+-- The spec is appended rather than constructed: an append cannot throw whatever order the
+-- game loaded our Lua in, and PZ Pulse validates the spec when it drains the list, naming
+-- any problem in the console and in its Shift+Z support dump.
+PZ_Pulse_EXT = PZ_Pulse_EXT or {}
 
 local function safe(fn, default)
     local ok, v = pcall(fn)
@@ -7,37 +11,33 @@ local function safe(fn, default)
     return default
 end
 
--- Round to 2 decimals (matches the in-game skill tooltip's round(xp, 2)).
+-- Round to 2 decimals (matches the in-game skill tooltip's round(xp, 2)). 
+-- getCalories() returns things like 689.6576538085938
 local function round2(v)
     v = tonumber(v) or 0
     return math.floor(v * 100 + 0.5) / 100
 end
 
-----------------------------------------------------------------------
--- collectors
-----------------------------------------------------------------------
+table.insert(PZ_Pulse_EXT, {
+    api     = 1,
+    mod     = "PZ_Nutri_Panel",
+    version = "0.0.9",
+    id      = "nutrition",
+    title   = "Nutrition",
+    cls     = "info",
 
-PC.Collector:new(
-    "nutrition",
-    function (player)
+    collect = function(player)
         local nut = safe(function() return player:getNutrition() end)
         if not nut then return nil end
-
-        local out = {
+        return {
             calories = round2(safe(function() return nut:getCalories() end, 0)),
             carbs    = round2(safe(function() return nut:getCarbohydrates() end, 0)),
             protein  = round2(safe(function() return nut:getProteins() end, 0)),
-            fat      = round2(safe(function() return nut:getLipids() end, 0))
+            fat      = round2(safe(function() return nut:getLipids() end, 0)),
         }
-        return out
-    end
-)
+    end,
 
-PC.Panel:new(
-    PC.CSS.from_file("PZ_Nutri_Panel", "assets/web/style/nutrition.css"),
-    PC.JS.from_file("PZ_Nutri_Panel", "assets/web/scripts/nutrition.js"),
-    "nutrition",
-    "Nutrition",
-    "info",
-    "function(d){return renderNutrition(d.info,d.nutrition);}"
-)
+    css     = "assets/web/style/nutrition.css",
+    js      = "assets/web/scripts/n
+    render  = "renderNutritionPanel",
+})
