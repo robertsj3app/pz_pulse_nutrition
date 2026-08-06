@@ -1,10 +1,10 @@
-name=Nutrition Panel for PZ Pulse Refactor
+name=Nutrition Panel for PZ Pulse
 id=PZ_Nutri_Panel
 author=FireBjorne
-description=Proof of concept new panel for PZ Pulse Refactor
+description=Nutrition panel for the PZ Pulse dashboard (extension panel, API v1).
 poster=poster.png
 icon=poster.png
 category=features
 modversion=0.0.8
 versionMin=42.0.0
-require=PZ_Pulse_Refactor
+require=PZ_Pulse

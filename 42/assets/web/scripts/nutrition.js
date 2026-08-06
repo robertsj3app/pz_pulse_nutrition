@@ -130,3 +130,11 @@ function renderNutrition(info,nutrition){
   if(!parts.length) return '<div class="empty">No nutrition data.</div>';
   return parts.join('');
 }
+
+// ---- PZ_Pulse API v1 adapter -- the ONLY change to this file ---------------------------------
+// v1 hands the render function the WHOLE payload, the same object every core panel receives, so
+// that adding a payload key later never changes any extension's signature. Everything above this
+// line is unmodified; the spec in Nutrition_Patch.lua names this wrapper as its `render`.
+function renderNutritionPanel(d){
+  return renderNutrition(d && d.info, d && d.nutrition);
+}
