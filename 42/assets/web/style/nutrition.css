@@ -1,22 +1,136 @@
-.nutrition{width:100%;margin-top:10px;padding:10px 12px;border:1px solid var(--line);background:#171717}
-.nutrition-title{font-size:.867em;color:var(--head);text-transform:uppercase;letter-spacing:.4px;margin-bottom:8px}
-.nutrition .row{display:flex;justify-content:space-between;gap:10px;margin:2px 0}
-.nutrition .lbl{flex:1 1 auto;color:var(--muted);font-size:.9em}
-.nutrition .val{flex:0 0 auto;font-variant-numeric:lining-nums tabular-nums;color:var(--ink);font-weight:600}
-.nutrition-note{margin-top:8px;color:var(--muted);font-size:.82em;line-height:1.3}
-.nutrition-track{display:flex;flex-direction:column;gap:6px;margin:6px 0}
-.nutrition-track .row{display:flex;justify-content:space-between;gap:10px;align-items:center}
-.nutrition-track .row .lbl{font-size:.95em;display:inline-flex;align-items:center;gap:10px;white-space:nowrap}
-.nutrition-track .row .tag.neutral{flex-shrink:0;margin-left:8px}
-.nutrition-bar{height:14px;border:1px solid var(--line);background:#0f0f0f;position:relative;overflow:hidden}
-.nutrition-bar .fill{position:absolute;top:0;height:100%;transition:width .25s ease,left .25s ease}
-.nutrition-bar .fill.zone{opacity:.9}
-.nutrition-bar .fill.zone.red{background:var(--danger)}
-.nutrition-bar .fill.zone.yellow{background:var(--warn)}
-.nutrition-bar .fill.zone.green{background:var(--ok)}
-.nutrition-bar .fill.zone.ok{background:var(--ok)}
-.nutrition-bar .fill.zone.warn{background:var(--warn)}
-.nutrition-bar .fill.zone.danger{background:var(--danger)}
-.nutrition-bar .fill.zone.grey{background:#4f4f4f}
-.nutrition-marker{position:absolute;top:0;width:2px;height:100%;background:#fff;box-shadow:0 0 0 1px rgba(255,255,255,.35);pointer-events:none;z-index:2}
-.nutrition-scale{display:flex;justify-content:space-between;font-size:.75em;color:var(--muted);margin-top:4px;font-variant-numeric:lining-nums tabular-nums}
+.nutrition {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    background: #171717
+}
+
+.nutrition-title {
+    font-size: .867em;
+    color: var(--head);
+    text-transform: uppercase;
+    letter-spacing: .4px;
+    margin-bottom: 8px
+}
+
+.nutrition .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 2px 0
+}
+
+.nutrition .lbl {
+    flex: 1 1 auto;
+    color: var(--muted);
+    font-size: .9em
+}
+
+.nutrition .val {
+    flex: 0 0 auto;
+    font-variant-numeric: lining-nums tabular-nums;
+    color: var(--ink);
+    font-weight: 600
+}
+
+.nutrition-note {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: .82em;
+    line-height: 1.3
+}
+
+.nutrition-track {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 6px 0
+}
+
+.nutrition-track .row {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center
+}
+
+.nutrition-track .row .lbl {
+    font-size: .95em;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap
+}
+
+.nutrition-track .row .tag.neutral {
+    flex-shrink: 0;
+    margin-left: 8px
+}
+
+.nutrition-bar {
+    height: 14px;
+    border: 1px solid var(--line);
+    background: #0f0f0f;
+    position: relative;
+    overflow: hidden
+}
+
+.nutrition-bar .fill {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: width .25s ease, left .25s ease
+}
+
+.nutrition-bar .fill.zone {
+    opacity: .9
+}
+
+.nutrition-bar .fill.zone.red {
+    background: var(--danger)
+}
+
+.nutrition-bar .fill.zone.yellow {
+    background: var(--warn)
+}
+
+.nutrition-bar .fill.zone.green {
+    background: var(--ok)
+}
+
+.nutrition-bar .fill.zone.ok {
+    background: var(--ok)
+}
+
+.nutrition-bar .fill.zone.warn {
+    background: var(--warn)
+}
+
+.nutrition-bar .fill.zone.danger {
+    background: var(--danger)
+}
+
+.nutrition-bar .fill.zone.grey {
+    background: #4f4f4f
+}
+
+.nutrition-marker {
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .35);
+    pointer-events: none;
+    z-index: 2
+}
+
+.nutrition-scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75em;
+    color: var(--muted);
+    margin-top: 4px;
+    font-variant-numeric: lining-nums tabular-nums
+}

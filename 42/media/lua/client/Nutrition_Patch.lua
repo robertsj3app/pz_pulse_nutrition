@@ -38,6 +38,6 @@ table.insert(PZ_Pulse_EXT, {
     end,
 
     css     = "assets/web/style/nutrition.css",
-    js      = "assets/web/scripts/n
+    js      = "assets/web/scripts/nutrition.js",
     render  = "renderNutritionPanel",
 })
