@@ -27,7 +27,7 @@ function calorieZoneColors(info) {
   if (state === 'overweight' || state === 'veryOverweight') {
     return { loss: 'ok', stable: 'warn', gain: 'danger' };
   }
-  return { loss: 'ok', stable: 'warn', gain: 'danger' };
+  return { loss: 'warn', stable: 'ok', gain: 'warn' };
 }
 function multiplierZoneColors(info) {
   var state = weightState(info);

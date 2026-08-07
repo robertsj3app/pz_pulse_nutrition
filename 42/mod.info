@@ -5,6 +5,6 @@ description=Nutrition panel for the PZ Pulse dashboard (extension panel, API v1)
 poster=poster.png
 icon=poster.png
 category=features
-modversion=1.0.0
+modversion=1.0.1
 versionMin=42.0.0
 require=PZ_Pulse
