@@ -21,7 +21,7 @@ end
 table.insert(PZ_Pulse_EXT, {
     api     = 1,
     mod     = "PZ_Nutri_Panel",
-    version = "0.0.9",
+    version = "1.0.0",
     id      = "nutrition",
     title   = "Nutrition",
     cls     = "info",
