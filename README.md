@@ -1,6 +1,6 @@
 # Nutrition Panel for PZ Pulse
 
-An extension for PZ Pulse that adds a dedicated Nutrition panel for viewing your character’s current nutrition information at a glance.
+An extension for [PZ Pulse](https://steamcommunity.com/workshop/filedetails/?id=3753700423) that adds a dedicated Nutrition panel for viewing your character’s current nutrition information at a glance.
 
 **Features:**
 
